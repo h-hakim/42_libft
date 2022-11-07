@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 20:19:31 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/07 14:24:48 by hhakim           ###   ########.fr       */
+/*   Created: 2022/11/07 18:28:41 by hhakim            #+#    #+#             */
+/*   Updated: 2022/11/07 19:44:56 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//returns 1 if the input int is alpha; 0 otherwise
-int	ft_isalpha(int c)
+
+/*allocates memory of size s, n times, & fill it with zeros*/
+void	*calloc(size_t n, size_t s)
 {
-	if (((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z')))
-		return (1);
-	return (0);
+	void	*ptr;
+
+	ptr = malloc(s * n);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, n * s);
+	return (ptr);
 }

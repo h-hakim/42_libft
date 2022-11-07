@@ -6,12 +6,13 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 14:04:18 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/03 15:38:44 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/07 14:30:52 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*inputs pointer to char and size_t n, returns void
+the fn fill string with zeros ntimes*/
 void	ft_bzero(void *s, size_t n)
 {
 	int	i;

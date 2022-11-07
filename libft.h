@@ -6,13 +6,14 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 20:07:10 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/03 19:12:06 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/07 18:37:26 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
 
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

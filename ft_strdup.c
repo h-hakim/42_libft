@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 20:19:31 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/07 14:24:48 by hhakim           ###   ########.fr       */
+/*   Created: 2022/11/07 19:51:39 by hhakim            #+#    #+#             */
+/*   Updated: 2022/11/07 20:26:50 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//returns 1 if the input int is alpha; 0 otherwise
-int	ft_isalpha(int c)
+
+char	*ft_strdup(const char *s)
 {
-	if (((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z')))
-		return (1);
-	return (0);
+	char	*r;
+	int		i;
+
+	if (!s)
+		return (NULL);
+	r = (char *)malloc(ft_strlen(s + 1));
+	if (!r)
+		return (NULL);
+	i = -1;
+	while (i++, s[i])
+	{
+		r[i] = s[i];
+	}
+	r[i] = 0;
+	return (r);
 }

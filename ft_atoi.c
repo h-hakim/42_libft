@@ -6,12 +6,12 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:23:45 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/06 17:45:55 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/07 14:29:10 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//inputs pointer to char returns index int beyond spaces
 int	ft_mvspace(char *s)
 {
 	int	i;
@@ -22,6 +22,8 @@ int	ft_mvspace(char *s)
 	return (i);
 }
 
+/*inputs const char pointer returns integer with ± option 
+(± can be one time only)*/
 int	ft_atoi(const char *s)
 {
 	int	i;

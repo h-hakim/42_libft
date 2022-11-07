@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:50:25 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/04 18:53:46 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/07 11:58:27 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	tice this should not happen as it means that either dstsize is incorrect
 	or that dst is not a proper string)
 
+*/
