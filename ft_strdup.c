@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:51:39 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/07 20:26:50 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/07 22:35:04 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 
 	if (!s)
 		return (NULL);
-	r = (char *)malloc(ft_strlen(s + 1));
+	r = (char *)malloc(ft_strlen(s)+ 1);
 	if (!r)
 		return (NULL);
 	i = -1;
