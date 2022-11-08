@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 20:19:38 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/08 17:11:12 by hhakim           ###   ########.fr       */
+/*   Created: 2022/11/08 16:38:06 by hhakim            #+#    #+#             */
+/*   Updated: 2022/11/08 17:06:44 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//returns 1 if the input int is digit; 0 otherwise
-int	ft_isdigit(int c)
+//allocates memory and create substring starting at index strt for length l
+char	*ft_substr(const char *s, unsigned int strt, size_t l)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	char	*r;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	if (!s)
+		return (NULL);
+	while ((i < strt) && (s[i]))
+		i++;
+	r = (char *)malloc(ft_strlen(s)+ (1 - i));
+	if (!r)
+		return (NULL);
+	while ((r[j]) && (r[j] < l))
+	{
+		r[j] = (char *)s[i];
+			i ++;
+			j ++;
+	}
+	r[j] = 0;
+	return (r);
 }
+
