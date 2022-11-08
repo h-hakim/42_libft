@@ -6,18 +6,18 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:23:45 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/07 14:29:10 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/08 17:25:43 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //inputs pointer to char returns index int beyond spaces
-int	ft_mvspace(char *s)
+int	ft_mvspace(const char *s)
 {
 	int	i;
 
 	i = 0;
-	while ((s[i] == ' ') || (s[i] >= '\t') && (s[i] <= '\r'))
+	while ((s[i] == ' ') || ((s[i] >= '\t') && (s[i] <= '\r')))
 		i++;
 	return (i);
 }

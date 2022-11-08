@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 21:57:21 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/03 15:40:23 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/08 17:27:08 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memset(void *s, int c, size_t l)
 	int	i;
 
 	i = -1;
-	while (++i < l)
+	while (++i < (int)l)
 		((unsigned char *)s)[i] = (unsigned char )c ;
 	return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:50:21 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/03 20:51:04 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/08 17:30:25 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, char *src, size_t dsize)
 	size_t	i;
 
 	if (dsize == 0)
-		return (NULL);
+		return (0);
 	i = 0;
 	while ((src[i] != 0) && (i < dsize))
 	{

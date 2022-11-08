@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:28:41 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/07 19:44:56 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/08 21:08:20 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,13 @@ void	*calloc(size_t n, size_t s)
 {
 	void	*ptr;
 
-	ptr = malloc(s * n);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, n * s);
-	return (ptr);
+	if (n && s)
+	{
+		ptr = (char *)malloc(s * n);
+		if (!ptr)
+			return (NULL);
+		ft_bzero(ptr, n * s);
+		return (ptr);
+	}
+	return (NULL);
 }

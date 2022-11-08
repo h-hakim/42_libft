@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:38:06 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/08 17:06:44 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/08 17:41:57 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 //allocates memory and create substring starting at index strt for length l
 char	*ft_substr(const char *s, unsigned int strt, size_t l)
 {
-	char	*r;
-	int		i;
-	int		j;
+	char			*r;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	j = 0;
@@ -27,9 +27,9 @@ char	*ft_substr(const char *s, unsigned int strt, size_t l)
 	r = (char *)malloc(ft_strlen(s)+ (1 - i));
 	if (!r)
 		return (NULL);
-	while ((r[j]) && (r[j] < l))
+	while ((r[j]) && (j < l))
 	{
-		r[j] = (char *)s[i];
+		r[j] = (char)s[i];
 			i ++;
 			j ++;
 	}

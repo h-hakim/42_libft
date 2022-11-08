@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 14:04:18 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/07 14:30:52 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/08 17:28:17 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	ft_bzero(void *s, size_t n)
 	if (n == 0)
 		return ;
 	i = -1;
-	while (++i < n)
+	while (++i < (int)n)
 		((unsigned char *)s)[i] = 0;
 }
