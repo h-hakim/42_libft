@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:50:25 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/10 14:15:37 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/10 17:18:13 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	if (n < ld)
 		return (ls + n);
 	j = ld;
-	while ((ld < n - 1) && (dst[j]) && (src[i]))
+	while ((ld < n - 1) && (src[i]))
 	{
 		dst[j] = src[i];
 		j ++;
