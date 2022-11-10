@@ -6,23 +6,27 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:37:21 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/08 18:09:43 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/09 16:22:40 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//compares n values for two strings(*s, *t, n) 
-// return int differnce in first unequal char
+//compares first n chars for two strings(*s, *t, n) 
+// return the differnce in first unequal char as int
 int	ft_memcmp(void *s, void *t, size_t n)
 {
-	int	i;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
-	i = -1;
-	if (!s || !t)
-		return (0);
-	while ((++i < (int)n) && \
-	(((unsigned char *)s)[i] == ((unsigned char *)t)[i]))
-		if (((unsigned char *)s)[i] == 0)
-			return (0);
-	return ((((unsigned char *)s)[i]) - (((unsigned char *)t)[i]));
+	s1 = (unsigned char *)s;
+	s2 = (unsigned char *)t;
+	while (n)
+	{
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1 ++;
+		s2 ++;
+		n --;
+	}
+	return (0);
 }
