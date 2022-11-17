@@ -6,7 +6,7 @@
 #    By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 17:20:57 by hhakim            #+#    #+#              #
-#    Updated: 2022/11/08 17:49:31 by hhakim           ###   ########.fr        #
+#    Updated: 2022/11/16 15:56:28 by hhakim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,9 @@ MANDATORY_FILES =   ft_strlen \
 					ft_calloc \
 					ft_strdup \
 					ft_substr \
+					ft_strncmp \
+					ft_strjoin \
+					ft_strtrim \
 
 
 SRCS_DIR = ./

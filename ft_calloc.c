@@ -6,12 +6,11 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:28:41 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/08 21:08:20 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/15 20:28:33 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*allocates memory of size s, n times, & fill it with zeros*/
 void	*calloc(size_t n, size_t s)
 {

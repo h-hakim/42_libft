@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:53:36 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/17 13:17:32 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/17 14:04:44 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,45 +24,45 @@ static int	ft_scanset(char c, char const *set )
 }
 
 //allocates memory and fill the new string with trimmed data
-char	*ft_filltrimmed(unsigned int i, unsigned int j, char const *s1 )
+static char	*ft_filltrimmed(size_t i, size_t j, char const *s1 )
 {
-	unsigned int	z;
-	char			*res;
+	size_t	z;
+	size_t	ind;
+	char	*res;
 
 	z = j - i;
-	res = (char *)malloc(sizeof(char) * (j - i + 1));
+	ind = 0;
+	res = (char *)malloc(sizeof(*s1) * (j - i + 1));
 	if (!res)
 		return (NULL);
-	while (s1[i] && i < j)
+	while (i < j)
 	{
-		*res = (char)s1[i];
+		res[ind] = (char)s1[i];
 		i ++;
-		res ++;
+		ind++;
 	}
-	*res = '\0';
-	res -= z;
+	res[ind] = 0;
 	return (res);
 }
 
-//trims set of chars from begeining and end of s1,
+//trims set of chars from begining and end of s1,
 // returns a new trimmed copy of s1.
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char			*res;
-	unsigned int	i;
-	unsigned int	j;
+	char	*res;
+	size_t	i;
+	size_t	j;
 
-	res = 0;
 	i = 0;
 	j = ft_strlen(s1);
-	if (s1 != 0 && set != 0 && ft_strlen(s1) > 0)
-	{
-		while (s1[i] && ft_scanset(s1[i], set))
-				i ++;
-		while (s1[j - 1] && ft_scanset(s1[j - 1], set) && j > i)
-				j --;
-		res = ft_filltrimmed(i, j, *s1);
-		return (res);
-	}
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return ((char *)s1);
+	while (s1[i] && ft_scanset(s1[i], set))
+			i ++;
+	while (ft_scanset(s1[j - 1], set) && j > i)
+			j --;
+	res = ft_filltrimmed(i, j, s1);
 	return (res);
 }

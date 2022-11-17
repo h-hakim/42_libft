@@ -6,12 +6,12 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 21:57:21 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/08 17:27:08 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/15 19:33:29 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//copies char c (taken as int) l times in array s.
 void	*ft_memset(void *s, int c, size_t l)
 {
 	int	i;

@@ -6,12 +6,12 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:29:53 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/10 14:00:21 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/15 20:30:04 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//calculate the length of s including \0.
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;

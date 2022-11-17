@@ -6,49 +6,43 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:50:29 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/04 15:55:21 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/16 16:12:03 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_scanneedle(const char *hay, const char *ned, size_t i, size_t j)
+// scan hay at needle returns (1) if it reaches \0, -1 otherwise. To detect
+//similar non-terminated neds in hay.
+static int	ft_scanneedle(const char *hay, const char *ned, size_t l)
 {
-	int		z;
-
-	z = i;
-	while ((hay[i] == ned[j]) && (ned[j]))
+	while ((*hay == *ned) && (*ned) && (l))
 	{
-		i ++;
-		j ++;
+		hay ++;
+		ned ++;
+		l --;
 	}
-	if (!ned[j])
-		return (z);
+	if (!*ned)
+		return (1);
 	else
-		j = 0;
-	return (z = -1);
+		return (-1);
 }
 
+//finds the needle and returns a pointer to hay where it was found.
 char	*ft_strnstr(const char *hay, const char *ned, size_t l)
 {
-	size_t		i;
-	size_t		j;
-	int			z;
+	int	z;
 
-	i = 0;
-	j = 0;
-	z = -1;
-	if (ned[j])
+	z = 0;
+	if (!*ned)
+		return ((char *)hay);
+	while ((*hay) && (l))
 	{
-		while ((hay[i]) && (i < l))
-		{
-			if (hay[i] == ned[j])
-				z = ft_scanneedle(hay, ned, i, j);
-			if (z >= 0)
-				return ((char *) hay + z);
-			i ++;
-		}
-		return (NULL);
+		if (*hay == *ned)
+			z = ft_scanneedle(hay, ned, l);
+		if (z > 0)
+			return ((char *) hay);
+		hay ++;
+		l --;
 	}
-	return ((char *) hay);
+	return (NULL);
 }

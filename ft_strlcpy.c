@@ -6,33 +6,26 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:50:21 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/08 17:30:25 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/15 19:27:47 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//copies up to dstsize - 1 characters from the string src to dst,
+// NUL-terminating the result if dstsize > 0, returns size_t src length.
 size_t	ft_strlcpy(char *dst, char *src, size_t dsize)
 {
 	size_t	i;
 
-	if (dsize == 0)
-		return (0);
-	i = 0;
-	while ((src[i] != 0) && (i < dsize))
+	if (dsize)
 	{
-		dst[i] = src[i];
-		i ++;
-	}
+		i = 0;
+		while ((src[i]) && (i < (dsize - 1)))
+		{
+			dst[i] = src[i];
+			i ++;
+		}
 		dst[i] = 0;
-	return (i);
+	}
+	return (ft_strlen(src));
 }
-
-// strlcpy() copies up to dstsize - 1 characters from the string src to dst,
-//  NUL-terminating the result if dstsize is not 0.
-//  For strlcpy() that means the
-/*length of src.  For strlcat() that means the initial length of dst plus
-	the length of src.
-
-	If the return value is >= dstsize, the output string has been truncated.
-	It is the caller's responsibility to handle this.*/

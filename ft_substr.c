@@ -6,34 +6,38 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:38:06 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/08 17:41:57 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/17 13:45:12 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//allocates memory and create substring starting at index strt for length l
-char	*ft_substr(const char *s, unsigned int strt, size_t l)
+//allocates memory and create substring starting at index st for length l;
+//See the note below for tests
+char	*ft_substr(const char *s, unsigned int st, size_t l)
 {
-	char			*r;
+	char			*dst;
 	unsigned int	i;
 	unsigned int	j;
 
-	i = 0;
 	j = 0;
-	if (!s)
+	i = 0;
+	dst = (char *)malloc(l + 1);
+	if (!dst)
 		return (NULL);
-	while ((i < strt) && (s[i]))
-		i++;
-	r = (char *)malloc(ft_strlen(s)+ (1 - i));
-	if (!r)
-		return (NULL);
-	while ((r[j]) && (j < l))
+	while (s[i])
 	{
-		r[j] = (char)s[i];
-			i ++;
+		if ((i >= st) && (j < l))
+		{
+			dst[j] = (char)s[i];
 			j ++;
+		}
+		i ++;
 	}
-	r[j] = 0;
-	return (r);
+	dst[j] = 0;
+	return (dst);
 }
 
+// if (st > (unsigned int) ft_strlen(s))
+// 	return ("");
+/*I am using the francinette test, so with this two lines the uni-test 
+failes, with this code 2 cases fails in libfTester*/

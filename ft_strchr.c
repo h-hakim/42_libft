@@ -6,20 +6,25 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:18:38 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/07 17:37:51 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/15 19:50:46 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*takes *string and int for char as an input returns the string
-where it finds the char c*/
+// takes *string and char (as an int) returns ptr to the string
+// where it finds the char.
 char	*ft_strchr(const char *s, int c)
 {
-	while ((*s != 0) && ((c > 0) && (c <= 255)))
+	char	f;
+
+	f = (char) c;
+	while (*s)
 	{
-		if (*s == c)
+		if (*s == f)
 			return ((char *) s);
 		s++;
 	}
+	if (!f)
+		return ((char *)s);
 	return (NULL);
 }
