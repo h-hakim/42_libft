@@ -6,27 +6,29 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 19:21:33 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/19 19:31:39 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/20 21:33:05 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//returns the length of the string tbe created (no of digits)
 size_t	ft_strn_ln(int nb)
 {
 	int	len;
 
 	len = 0;
 	if (nb <= 0)
-	len++;
+	len ++;
 	while (nb)
 	{
-		len++;
+		len ++;
 		nb = nb / 10;
 	}
 	return ((size_t)len);
 }
 
+//converts an int to a string of chars retruns a pointer to the created string.
 char	*ft_itoa(int n)
 {
 	int		len;

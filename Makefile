@@ -6,7 +6,7 @@
 #    By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/08 17:20:57 by hhakim            #+#    #+#              #
-#    Updated: 2022/11/19 20:02:52 by hhakim           ###   ########.fr        #
+#    Updated: 2022/11/20 21:41:01 by hhakim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,12 @@ MANDATORY_FILES =   ft_strlen \
 					ft_strjoin \
 					ft_strtrim \
 					ft_split \
+					ft_strmapi \
+					ft_itoa \
+					ft_putchar_fd \
+					ft_putnbr_fd \
+					ft_putendl_fd \
+					ft_putstr_fd \
 
 
 SRCS_DIR = ./

@@ -6,12 +6,12 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 19:55:13 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/19 19:57:39 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/20 21:46:10 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//write integer n into file descriptor fd through recurssion doesn't return.
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	str;

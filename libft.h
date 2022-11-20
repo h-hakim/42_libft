@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 20:07:10 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/19 19:14:53 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/20 21:43:57 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 # include <stddef.h>
 # include <stdlib.h>
-# include <stdio.h>
+# include <unistd.h>
 
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -44,5 +44,10 @@ int		ft_memcmp(void *s, void *t, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t l);
+char	*ft_itoa(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
