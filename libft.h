@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 20:07:10 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/17 23:15:24 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/19 19:14:53 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stddef.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -33,6 +34,7 @@ char	*ft_strdup(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(const char *s, unsigned int strt, size_t l);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_split(char const *s, char c);
 int		ft_atoi(const char *s);
 void	ft_bzero(void *s, size_t n);
