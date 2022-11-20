@@ -6,11 +6,12 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:53:36 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/17 14:04:44 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/17 21:45:36 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 //scan set and returns 1 if it find any identical c in set 0 otherwise
 static int	ft_scanset(char c, char const *set )
 {

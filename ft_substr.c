@@ -6,7 +6,7 @@
 /*   By: hhakim <hhakim@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:38:06 by hhakim            #+#    #+#             */
-/*   Updated: 2022/11/17 13:45:12 by hhakim           ###   ########.fr       */
+/*   Updated: 2022/11/17 16:11:04 by hhakim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ char	*ft_substr(const char *s, unsigned int st, size_t l)
 
 	j = 0;
 	i = 0;
-	dst = (char *)malloc(l + 1);
+	dst = (char *)malloc(sizeof(*s) * (l + 1));
 	if (!dst)
 		return (NULL);
 	while (s[i])
 	{
-		if ((i >= st) && (j < l))
+		if ((i >= st) && (j < (unsigned int)l))
 		{
 			dst[j] = (char)s[i];
 			j ++;
